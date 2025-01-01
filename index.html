@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <title>Home page</title>
+<!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    
+    
+    
+    
+  </head>
+  <body class="font-[syne]">
+    <!-- Navbar section -->
+    <nav
+      class=" border-gray-200 z-50 shadow-md shadow-zinc-400 sticky top-0 w-full    bg-black"
+    >
+      <div
+        class="flex flex-wrap items-center justify-between  bg-white max-md:pl-[8%] pl-[9%] xl:pl-[12%] bg"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse max-[900px]:flex-1">
+          <img src="img/Frame 4 1.svg" class="h-11 max-[500px]:h-6  max-[950px]:h-8" alt="Flowbite Logo" />
+          <img src="img/Frame 5.svg" class="h-11 max-[500px]:h-6  max-[950px]:h-8" alt="Flowbite Logo" />
+        </a>
+        <div class="max-[900px]:flex-1 inline-flex items-center justify-end bg-black max-[900px]:py-2 max-md:pr-[8%] pr-[9%] xl:pr-[12%] ">
+          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center justify-center   w-12 h-12 text-sm border-4   border-black rounded-full min-[900px]:hidden bg-black " aria-controls="navbar-dropdown" aria-expanded="false" >
+            <span class="sr-only">Open main menu</span>
+            <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.85442 2H20.9848" stroke="white" stroke-width="3" stroke-linecap="round"/>
+              <path d="M1.85442 10H9.15876" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <!-- <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center justify-center max-md:flex-1 w-9 h-9 text-sm border-4   border-black rounded-full md:hidden bg-black max-md:p-3" aria-controls="navbar-dropdown" aria-expanded="false" >
+          <span class="sr-only">Open main menu</span>
+          <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.85442 2H20.9848" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M1.85442 10H9.15876" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </button>-->
+
+        <div class="hidden w-full min-[900px]:block min-[900px]:w-auto min-[900px]:bg-black  py-4 max-md:pr-[%] pr-[10%] pl-8 xl:pr-[13.8%]" id="navbar-dropdown" >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-6 min-[930px]:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:items-center"
+          >
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 md:text-white rounded-2xl max-md:hover:bg-gray-100 md:border-0 md:p-0 md:w-auto"
+              >
+                Portfolio
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal  bg-black  divide-y divide-gray-100 rounded-lg shadow w-44"
+              >
+                <ul
+                  class="py-2 text-sm  hover:text-slate-300 text-white"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2   text-white hover:text-slate-300"
+                      >Works</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2   text-white hover:text-slate-300"
+                      >Services</a
+                    >
+                  </li>
+                </ul>
+                
+              </div>
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="block py-2 px-3 md:text-white rounded-2xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-black md:relative md:underline md:decoration-transparent md:after:content-[''] md:after:absolute md:after:left-0 md:after:bottom-[-3px] md:after:h-[3px] md:after:bg-transparent md:after:w-0 md:after:transition-all md:after:duration-500 md:after:ease-in-out md:hover:after:w-full md:hover:after:bg-[#A155FF] md:after:delay-100"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                  href="#"
+                  class="block py-2 px-3 md:text-white  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 rounded-2xl text-black md:relative md:underline  md:decoration-transparent md:after:content-[''] md:after:absolute md:after:left-0 md:after:bottom-[-3px] md:after:h-[3px] md:after:bg-transparent md:after:w-0 md:after:transition-all md:after:duration-500 md:after:ease-in-out md:hover:after:w-full  md:hover:after:bg-[#A155FF] md:after:delay-0"
+                  >About
+              </a>
+
+            </li>
+            <div class="h-[1px] hidden max-md:flex my-2 bg-slate-200 "></div>
+            <li>
+              <a href="#" class="relative block group py-[4px] px-[10px] border-2 border-white max-md:hover:bg-gray-100 border-solid rounded-2xl md:rounded-3xl md:text-white overflow-hidden">
+                  <div class="flex md:items-center md:justify-center relative z-10">
+                     <span class="px-2 py-1 transition-all ease-in-out delay-200 duration-200 -mr-[14px] group-hover:mr-0">Get in Touch</span>
+                     <i class="fa-solid fa-arrow-right md:bg-black px-1 rounded-full text-sm md:-ml-1 opacity-0 translate-x-0    md:group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-1000 ease-in-out" style="color: #ffffff;"></i>
+                  </div>
+                  <div class="absolute hidden md:flex inset-0 bg-[#F2751A] rounded-full scale-0 group-hover:scale-150 transition-transform duration-700 ease-in-out"></div>
+              </a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    
+  <!-- for tab and desktop -->
+   <div class="hidden min-[900px]:flex  bg-contain" style="background-image: url('img/Section 1.png');">
+     <div class=" bg-no-repeat bg- contain w-[100vw] h-[86vh] max-xl:h-[75vh] max-[950px]:h-[65vh] max-[1200px]:h-[70vh]  max-[900px]:h-[100vh] overflow-hidden flex items-center">
+       <div class="flex max-[900px]:flex-col   justify-between items-start w-[100%] h-[100%] ">
+         <!-- First Div: 45% width -->
+         <div class="w-[45%]  max-[900px]:w-[100%]  h-[100%] max-sm:h-auto gap-y-4 flex flex-col justify-center   items-center max-[900px]:items-start max-md:pl-[8%] pl-[9%] xl:pl-[12%] max-[900px]:pt-14">
+           <p class=" w-[100%] text-[5rem] leading-tight font-[syne] font-semibold   max-xl:text-6xl  max-[1046px]:text-5xl  max-sm:text-5xl  max-[1290px]:text-6xl max-[950px]:text-4xl max-[900px]:text-7xl max-[750px]:text-6xl max-[500px]:text-4xl max-[450px]:text-3xl max-[450px]:leading-none ">
+             Where ideas <br>
+             <span class="text-purple-700">E</span>volve into <br>
+             Product
+           </p>
+           <p class="text-[#171616] text-xl font-bold max-xl:text-lg max-[1150px]:text-base max-lg:text-sm max-[900px]:w-[70%] max-sm:w-[90%] max-[500px]:text-xs max-[450px]:text-xs">creative concepts and innovative ideas are transformed into tangible, market-ready products. It emphasizes the process of development, innovation, and refinement that turns abstract ideas into concrete outcomes.</p>
+         </div>
+         <!-- Second Div: 55% width -->
+         <div class="w-[55%] h-[100%] max-[900px]:w-[100%]  -mr-10  ">
+           <img src="img/Group 57.png" alt="" class="w-[100%] h-full  object-center  object-fill max-lg:object-contain">
+         </div>
+       </div>
+     </div>
+   </div>
+
+  <!-- for mobile only -->
+  <div class="hidden max-[900px]:px-[8%] max-[900px]:flex bg-no-repeat bg-cover" style="background-image: url('img/Rectangle 1.png');">
+    <div class="       overflow-hidden flex items-center">
+      <div class="flex max-[900px]:flex-col   justify-between items-start  space-y-3">
+        <!-- First Div: 45% width -->
+        <div class=" max-sm:h-auto gap-y-4 flex flex-col justify-center   items-center max-[900px]:items-start   max-[900px]:pt-14 max-sm:pt-10">
+          <p class="  text-white  leading-tight font-[syne] font-normal   max-xl:text-6xl   max-sm:text-5xl  text-7xl max-[750px]:text-6xl max-[500px]:text-4xl max-[450px]:text-3xl max-[450px]:leading-none ">
+            Where ideas <br>
+            <span class="text-purple-700">E</span>volve into <br>
+            Product
+          </p>
+          <p class="text-white text-xl font-bold max-xl:text-lg max-[1150px]:text-base  w-[80%] max-sm:w-[90%] max-[500px]:text-xs max-[450px]:text-xs">creative concepts and innovative ideas are transformed into tangible, market-ready products. It emphasizes the process of development, innovation, and refinement that turns abstract ideas into concrete outcomes.</p>
+        </div>
+        <!-- Second Div: 55% width -->
+        <div class="  w-[100%]    flex justify-center">
+          <img src="img/Group 3.png" alt="" class=" min-[400px]:w-[23rem] min-[400px]:h-[20rem] md:h-[23rem] md:w-[28rem]   object-contain">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- main section -->
+
+<div class=" lg:px-[9%] xl:px-[12%]  max-h-[96vh] py-4 pb-8 max-md:py-2 max-sm:pt-2 " style="background-image: url('img/main section bg 5.png'); background-size: contain; background-position:   center;">
+      <div>
+        <div class="upper-box max-md:px-[8%] max-lg:px-[9%]  flex max-md:flex-col max-[900px]:space-y-0 justify-between  gap">
+          <div class="left-side flex flex-col space-y-3 xl:space-y-0 justify-center ">
+            <p class="text-[4.8rem] max-xl:text-7xl max-[1180px]:text-6xl max-[900px]:text-5xl   font-medium max-sm:text-4xl max-[500px]:text-4xl max-[360px]:text-4xl text-[#F2751A] xlleading-tight">Spotlight</p>
+            <p class="text-[4rem] font-medium max-xl:text-6xl max-[1180px]:text-5xl max-[900px]:text-[36px]   max-sm:text-3xl text-[#EDECEA] xl:leading-tight">Shining a Light on</p>
+            <p class="text-[4rem] font-medium max-xl:text-6xl max-[1180px]:text-5xl max-[900px]:text-[36px] max-sm:text-3xl text-[#A155FF] xl:leading-tight">Excellence</p>
+          </div >
+          <div class="right-side flex items-center justify-center ">
+            <div class="relative flex flex-col items-center  max-lg:w-[20rem] max-xl:w-[24rem] w-[24rem]    max-[900px]:w-[18rem]" style="background: radial-gradient(circle, transparent 0%, rgba(82, 63, 49, 0.6) 30%, rgba(82, 63, 49, 0) 68%);">
+              <!-- Image -->
+              <img src="img/image 10.png" alt="Pill Choice" class="max-lg:w-[20rem] max-xl:w-[24rem] w-[24rem]     max-[900px]:w-[18rem] ">
+              <div class="flex space-x-5  max-xl:space-x-5  max-sm:space-x-5 max-[375px]:space-x-3  absolute max-lg:top-28 top-32      max-[900px]:top-24">
+                <!-- Blue Pill Box -->
+                 <a href="">
+                  <div class="group relative flex flex-col items-center justify-center max-lg:w-32 max-lg:h-32 max-xl:w-36 max-xl:h-36 w-36 h-36     max-[900px]:w-28 max-[900px]:h-28 border-[5px] border-slate-300 rounded-full overflow-hidden transition duration-300 delay-100">
+                    <!-- Background animation -->
+                    <div class="absolute inset-0 bg-gradient-to-tl from-[#A155FF]/75 to-[#A155FF]/75 scale-0 group-hover:scale-100 origin-bottom-right  transition-transform duration-500 ease-out rounded-full"></div>
+
+                  
+                    <!-- Content -->
+                    <p class="relative text-[#F047FF] text-3xl max-[900px]:text-2xl font-medium group-hover:hidden z-10 text-center">Blue Pill</p>
+                    <p class="relative text-white max-[1180px]:text-2xl max-[900px]:text-xl text-2xl max-[375px]:text-xl font-medium text-center hidden group-hover:flex z-10">Get your job done</p>
+                    <i class="relative hidden group-hover:flex fa-solid fa-arrow-right bg-black max-[900px]:px-[8px] px-[9.5px] py-1 rounded-full text-xl max-[900px]:text-sm -ml-1 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-1000 ease-in-out z-10" style="color: #ffffff;"></i>
+                  </div>
+                  
+                  
+                 </a>
+                
+                <!-- Or Text -->
+                <div class="flex items-center text-[#F047FF] text-5xl max-lg:text-4xl max-[900px]:text-3xl font-medium">Or</div>
+                <!-- Red Pill Box -->
+                <a href="">
+                  <div class="group relative flex flex-col items-center justify-center max-lg:w-32 max-lg:h-32 max-xl:w-36 max-xl:h-36 w-36 h-36    max-[900px]:w-28 max-[900px]:h-28 border-[5px] border-slate-300 rounded-full overflow-hidden transition duration-300 delay-100">
+                    <!-- Background animation -->
+                    <div class="absolute inset-0 bg-gradient-to-tl from-[#F2751A]/75 to-[#F2751A]/75 scale-0 group-hover:scale-100 origin-bottom-right transition-transform duration-500 ease-out rounded-full"></div>
+                    
+                    <!-- Content -->
+                    <p class="relative text-[#F2751A] text-3xl max-[900px]:text-2xl   font-medium group-hover:hidden z-10 text-center">Red Pill</p>
+                    <p class="relative text-white text-2xl max-[900px]:text-2xl max-[1180px]:text-2xl max-[900px]:text-xl max-[375px]:text-xl font-medium text-center hidden group-hover:flex z-10">Get full overview</p>
+                    <i class="relative hidden group-hover:flex fa-solid fa-arrow-right bg-black px-[9.5px] max-[900px]:px-[8px] py-1 rounded-full text-xl max-[900px]:text-sm -ml-1 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-1000 ease-in-out z-10" style="color: #ffffff;"></i>
+                  </div>
+                  
+                  
+                 </a>
+                 
+                
+              </div>
+          </div>
+          </div>
+        </div>
+  <!-- for desktop -->
+        <div class="max-lg:hidden">
+          <div class="flex justify-between max-xl:space-x-[4%] xl:space-x-[6%] mt-4">
+            <!-- box-1 -->
+            <div class="relative group lg:flex-1  overflow-hidden shadow-md  rounded-3xl  hover:scale-110 transition duration-200">
+              <!-- Image -->
+              <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+              <!-- Text Overlay -->
+              <div class="absolute bottom-0 left-0 w-full h-full  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-300 ease-in-out flex-col items-start  ">
+                  <h1 class="text-white max-xl:text-xl   text-xl px-2   mt-2 lg:mt-1 font-[570]  "><span class="text-violet-500">U</span><span class="text-red-400">i</span> <span class="text-red-300">&</span> <span class="text-green-400">U</span><span class="text-orange-300">x</span> designer</h1>
+                  <p class="text-white text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                    At donec mollis nulla amet. Elementum nibh
+                     lacus adipiscing integer. </p>
+                  <div class="flex    items-center mt-4 lg:mt-[4%] px-2">
+                    <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                      <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                      Submit
+                    </button>
+                  </div>
+              </div>
+            </div>
+            <!-- box-2 -->
+            <div class="relative group lg:flex-1  overflow-hidden shadow-md  rounded-3xl  hover:scale-110 transition duration-200">
+              <!-- Image -->
+              <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+              <!-- Text Overlay -->
+              <div class="absolute bottom-0 left-0 w-full h-full  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-300 ease-in-out flex-col items-start  ">
+                  <h1 class="text-white max-xl:text-xl   text-xl px-2  mt-2 lg:mt-1 font-semibold  "><span class="text-orange-400">Front-end Dev</span></h1>
+                  <p class="text-white text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                    At donec mollis nulla amet. Elementum nibh
+                     lacus adipiscing integer. </p>
+                  <div class="flex    items-center mt-4 lg:mt-[4%] px-2">
+                    <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                      <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                      Submit
+                    </button>
+                  </div>
+              </div>
+            </div>
+            <!-- box-3 -->
+            <div class="relative group lg:flex-1  overflow-hidden shadow-md  rounded-3xl  hover:scale-110 transition duration-200">
+              <!-- Image -->
+              <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+              <!-- Text Overlay -->
+              <div class="absolute bottom-0 left-0 w-full h-full  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-300 ease-in-out flex-col items-start  ">
+                  <h1 class="text-white max-xl:text-xl   text-xl px-2  mt-2 lg:mt-1 font-semibold  "><span class="text-green-400">Back-End Dev</span></h1>
+                  <p class="text-white text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                    At donec mollis nulla amet. Elementum nibh
+                     lacus adipiscing integer. </p>
+                  <div class="flex    items-center mt-4 lg:mt-[4%] px-2">
+                    <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                      <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                      Submit
+                    </button>
+                  </div>
+              </div>
+            </div>
+            <!-- box-4 -->
+            <div class="relative group lg:flex-1  overflow-hidden shadow-md  rounded-3xl  hover:scale-110 transition duration-200">
+              <!-- Image -->
+              <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+              <!-- Text Overlay -->
+              <div class="absolute bottom-0 left-0 w-full h-full  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-300 ease-in-out flex-col items-start  ">
+                  <h1 class="text-white max-xl:text-xl   text-xl px-2  mt-2 lg:mt-1 font-[570]  "><span class="text-violet-500">U</span><span class="text-red-400">i</span> <span class="text-red-300">&</span> <span class="text-green-400">U</span><span class="text-orange-300">x</span> designer</h1>
+                  <p class="text-white text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                    At donec mollis nulla amet. Elementum nibh
+                     lacus adipiscing integer. </p>
+                  <div class="flex    items-center mt-4 lg:mt-[4%] px-2">
+                    <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                      <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                      Submit
+                    </button>
+                  </div>
+              </div>
+            </div>
+            
+              </div>
+        </div>
+
+        <!-- for mobile -->
+
+        <div class="containerr swiper  px-2 lg:hidden mt-2 md:mt-14">
+         <div class="card-wrapper max-w-[240px] max-md:max-w-[200px] max-md:max-h-[300px] max-h-[335px] mb-8">
+           <div class="card-list swiper-wrapper max-w-[240px] max-h-[335px]">
+            <!-- slider-1 -->
+             <div class="relative group overflow-hidden rounded-3xl transition-all duration-500 card-item swiper-slide max-w-[220px] max-h-[335px] active:cursor-grabbing">
+               <!-- Image -->
+               <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+               <!-- Text Overlay -->
+               <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%]   transition-transform duration-500 ease-in-out flex-col items-start  ">
+                   <h1 class="text-white text-xl px-4  mt-2 lg:mt-1 font-[570] xl:mt-4 "><span class="text-violet-500">U</span><span class="text-red-400">i</span> <span class="text-red-300">&</span> <span class="text-green-400">U</span><span        class="text-orange-300">x</span> designer</h1>
+                   <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                     At donec mollis nulla amet. Elementum nibh
+                      lacus adipiscing integer. </p>
+                   <div class="flex items-center mt-3 lg:mt-[8%] px-2">
+                     <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                       <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                       Submit
+                     </button>
+                   </div>
+               </div>
+             </div>
+              <!-- slider-2 -->
+             <div class="relative group overflow-hidden rounded-3xl transition duration-200 card-item swiper-slide max-w-[220px] max-h-[335px] active:cursor-grabbing">
+               <!-- Image -->
+               <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+               <!-- Text Overlay -->
+               <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%]  transition-transform duration-500 ease-in-out flex-col items-start  ">
+                   <h1 class="text-white max-xl:text-xl text-2xl px-4  mt-2 lg:mt-1 font-semibold xl:mt-4 "><span class="text-orange-400">Front-end Dev</span></h1>
+                   <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                     At donec mollis nulla amet. Elementum nibh
+                      lacus adipiscing integer. </p>
+                   <div class="flex items-center mt-3 lg:mt-[8%] px-2">
+                     <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                       <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                       Submit
+                     </button>
+                   </div>
+               </div>
+             </div>
+              <!-- slider-3 -->
+             <div class=" relative group overflow-hidden rounded-3xl   transition duration-200 card-item swiper-slide max-w-[220px] max-h-[335px]  active:cursor-grabbing">
+               <!-- Image -->
+               <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+               <!-- Text Overlay -->
+               <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%]  transition-transform duration-500 ease-in-out flex-col items-start  ">
+                   <h1 class="text-white max-xl:text-xl text-2xl px-4  mt-2 lg:mt-1 font-semibold xl:mt-4 "><span class="text-green-400">Back-end Dev</span></h1>
+                   <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                     At donec mollis nulla amet. Elementum nibh
+                      lacus adipiscing integer. </p>
+                   <div class="flex  items-center mt-3 lg:mt-[8%] px-2">
+                     <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                       <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                       Submit
+                     </button>
+                   </div>
+               </div>
+             </div>
+              <!-- slider-4 -->
+             <div class="relative group overflow-hidden rounded-3xl transition duration-200 card-item swiper-slide max-w-[220px] max-h-[335px] active:cursor-grabbing">
+               <!-- Image -->
+               <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+               <!-- Text Overlay -->
+               <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-500 ease-in-out flex-col items-start  ">
+                   <h1 class="text-white max-xl:text-xl   text-2xl px-4  mt-2 lg:mt-1 font-semibold xl:mt-4 "><span class="text-orange-400">Front-end Dev</span></h1>
+                   <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                     At donec mollis nulla amet. Elementum nibh
+                      lacus adipiscing integer. </p>
+                   <div class="flex items-center mt-3 lg:mt-[8%] px-2">
+                     <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                       <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                       Submit
+                     </button>
+                   </div>
+               </div>
+             </div>
+              <!-- slider-5 -->
+              <div class="relative group overflow-hidden  rounded-3xl transition duration-200 card-item swiper-slide max-w-[220px] max-h-[335px] active:cursor-grabbing">
+                <!-- Image -->
+                <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%] transition-transform duration-500 ease-in-out flex-col items-start  ">
+                    <h1 class="text-white max-xl:text-xl text-2xl px-4  mt-2 lg:mt-1 font-semibold xl:mt-4 "><span class="text-green-400">Back-end Dev</span></h1>
+                    <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                      At donec mollis nulla amet. Elementum nibh
+                       lacus adipiscing integer. </p>
+                    <div class="flex items-center mt-3 lg:mt-[8%] px-2">
+                      <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                        <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                        Submit
+                      </button>
+                    </div>
+                </div>
+              </div>
+              <!-- slider-6 -->
+              <div class="relative group overflow-hidden rounded-3xl transition duration-200 card-item swiper-slide max-w-[220px] max-h-[335px] active:cursor-grabbing">
+                <!-- Image -->
+                <img src="img/boxes.svg" alt="Image" class="w-full h-full object- contain rounded-3xl ">
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden  backdrop-blur-lg translate-y-full group-hover:translate-y-[40%]  transition-transform duration-500 ease-in-out flex-col items-start  ">
+                    <h1 class="text-white max-xl:text-xl text-2xl px-4  mt-2 lg:mt-1 font-[570] xl:mt-4 "><span class="text-violet-500">U</span><span class="text-red-400">i</span> <span class="text-red-300">&</span> <span class="text-green-400">U</span><span class="text-orange-300">x</span> designer</h1>
+                    <p class="text-white text-sm max-md:text-xs min-[1100px]:text-sm  px-4 lg:px-1  mt-2 lg:mt-0 min-[1100px]:px-2 min-[1100px]:mt-2 leading-tight font-light ">Lorem ipsum dolor sit amet consectetur. 
+                      At donec mollis nulla amet. Elementum nibh
+                       lacus adipiscing integer. </p>
+                    <div class="flex items-center mt-3 lg:mt-[8%] px-2">
+                      <button type="submit" class="px-2 py-[5px] bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                        <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                        Submit
+                      </button>
+                    </div>
+                </div>
+              </div>
+           </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination "></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev text-[#A155FF] max-sm:hidden"></div>
+              <div class="swiper-button-next text-[#A155FF] max-sm:hidden"></div>
+              </div>
+        </div>
+      </div>
+</div>
+
+<!-- Insightful Impressions -->
+
+<div class="py-16  max-sm:py-9 max-[480px]:py-2  lg:px-[9%] xl:px-[12%] bg-no-repeat bg- contain bg-center" style="background-image: url(./img/bg\6.png );">
+  <div class="max-md:px-[8%] max-lg:px-[9%] w-[100%] my-5 max-sm:my-0 max-lg:my-0   flex  max-lg:justify-center">
+      <div class="max-lg:mx-auto max-lg:hidden">
+          <img src="./img/Group 40.png" class=" object-contain max-w-[300px] xl:max-w-[275px]" alt="">
+      </div>
+      <div class=" flex flex-col space-y-3 max-sm:space-y-0 ">
+          <p class="text-5xl max-md:text-4xl max-xl:text-4xl max-sm:text-3xl font-[syne] text-center font-semibold max-[480px]:text-2xl "><span class="text-black">Insightful</span>
+              <span class="text-purple-700 ">Impressions</span>
+          </p>
+          <img class="h-[3rem] mx-auto" src="./img/Frame 22 (1).png" alt="" srcset="">
+          <div class="flex  justify-between content-center gap-4 max-lg:flex-wrap max-md:flex-wrap max-lg:hidden">
+              <div class="bg-[#000000]  shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-[.93]  hover:skew-x-6  duration-700">
+                  <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+                  <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                      donec mollis Lorem ipsum dolor sit amet.
+                      nullaametadipiscing integer.</p>
+                  <div class="flex justify-between mt-1">
+                      <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-regular fa-star text-yellow-400"></i></p>
+                      <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+
+                  </div>
+                  <div class="rounded-full gap-3 flex">
+                      <img src="img/Ellipse 1.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                      <div class="mt-2">
+                          <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                          <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out  hover:scale-[.93]  hover:skew-x-6  duration-700">
+                  <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+                  <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                      donec mollis Lorem ipsum dolor sit amet.
+                      nullaametadipiscing integer.</p>
+                  <div class="flex justify-between mt-1">
+                      <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-regular fa-star text-yellow-400"></i></p>
+                      <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+
+                  </div>
+                  <div class="rounded-full gap-3 flex ">
+                      <img src="img/Ellipse 1-1.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                      <div class="mt-2">
+                          <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                          <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out  hover:scale-[.93]  hover:skew-x-6 duration-700">
+                  <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+                  <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                      donec mollis Lorem ipsum dolor sit amet.
+                      nullaametadipiscing integer.</p>
+                  <div class="flex justify-between mt-1">
+                      <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-solid fa-star text-yellow-400"></i><i
+                              class="fa-regular fa-star text-yellow-400"></i></p>
+                      <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+
+                  </div>
+                  <div class="rounded-full gap-3 flex ">
+                      <img src="img/Ellipse 1-2.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                      <div class="mt-2">
+                          <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                          <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+    </div>
+<!-- for mobile -->
+    <div class=" pt-4  containerr swiper px-2 lg:hidden  ">
+      <div class="card-wrapper max-w-[240px]  mb-8">
+        <div class="card-list swiper-wrapper ">
+         <!-- slider-1 -->
+          <div class="bg-[#000000] active:cursor-grabbing card-item swiper-slide shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-105  duration-500">
+                      <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+                      <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                          donec mollis Lorem ipsum dolor sit amet.
+                          nullaametadipiscing integer.</p>
+                      <div class="flex justify-between mt-1">
+                          <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                                  class="fa-solid fa-star text-yellow-400"></i><i
+                                  class="fa-solid fa-star text-yellow-400"></i><i
+                                  class="fa-solid fa-star text-yellow-400"></i><i
+                                  class="fa-regular fa-star text-yellow-400"></i></p>
+                          <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+    
+                      </div>
+                      <div class="rounded-full gap-3 flex">
+                          <img src="img/Ellipse 1.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                          <div class="mt-2">
+                              <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                              <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                          </div>
+                      </div>
+          </div>
+           <!-- slider-2 -->
+           <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-105  duration-500 active:cursor-grabbing card-item swiper-slide">
+            <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+            <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                donec mollis Lorem ipsum dolor sit amet.
+                nullaametadipiscing integer.</p>
+            <div class="flex justify-between mt-1">
+                <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-regular fa-star text-yellow-400"></i></p>
+                <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+    
+            </div>
+            <div class="rounded-full gap-3 flex ">
+                <img src="img/Ellipse 1-1.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                <div class="mt-2">
+                    <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                    <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                </div>
+            </div>
+        </div>
+           <!-- slider-3 -->
+           <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-105 duration-500 active:cursor-grabbing card-item swiper-slide">
+            <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+            <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                donec mollis Lorem ipsum dolor sit amet.
+                nullaametadipiscing integer.</p>
+            <div class="flex justify-between mt-1">
+                <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-regular fa-star text-yellow-400"></i></p>
+                <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+    
+            </div>
+            <div class="rounded-full gap-3 flex ">
+                <img src="img/Ellipse 1-2.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                <div class="mt-2">
+                    <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                    <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                </div>
+            </div>
+        </div>
+           <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-105 duration-500 active:cursor-grabbing card-item swiper-slide">
+            <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+            <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                donec mollis Lorem ipsum dolor sit amet.
+                nullaametadipiscing integer.</p>
+            <div class="flex justify-between mt-1">
+                <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-regular fa-star text-yellow-400"></i></p>
+                <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+    
+            </div>
+            <div class="rounded-full gap-3 flex ">
+                <img src="img/Ellipse 1-2.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                <div class="mt-2">
+                    <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                    <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                </div>
+            </div>
+        </div>
+           <div class="bg-[#000000] shadow-md hover:shadow-black transition h-fit rounded-2xl p-4 ease-in-out hover:scale-105 duration-500 active:cursor-grabbing card-item swiper-slide">
+            <p class="text-[12px] font-[syne] font-semibold text-orange-600">New visit by company name</p>
+            <p class="text-white text-[12px] font-[syne] mt-3 ">Lorem ipsum dolor sit amet consectetur.At
+                donec mollis Lorem ipsum dolor sit amet.
+                nullaametadipiscing integer.</p>
+            <div class="flex justify-between mt-1">
+                <p class="tracking-widest text-[12px]"><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-regular fa-star text-yellow-400"></i></p>
+                <img src="./img/”.png" class="h-5 mt-2 " alt="" srcset="">
+    
+            </div>
+            <div class="rounded-full gap-3 flex ">
+                <img src="img/Ellipse 1-2.png" class="rounded-full h-[17%] w-[17%]" alt="">
+                <div class="mt-2">
+                    <p class="font-[syne] font-semibold text-white text-[12px]">johnny depp</p>
+                    <p class="text-[#767676] font-[syne] text-[12px]">Visit Cosmetician</p>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+           <!-- If we need pagination -->
+           <div class="swiper-pagination "></div>
+    
+           <!-- If we need navigation buttons -->
+           <div class="swiper-button-prev text-[#A155FF] max-sm:hidden"></div>
+           <div class="swiper-button-next text-[#A155FF] max-sm:hidden"></div>
+           </div>
+     </div>
+</div>
+
+
+
+
+
+<!-- customer and parteners -->
+<div class="sudhar hidden sm:block max-md:px-[8%] px-[9%] xl:px-[12%] py-12 " style="background-image: url(./img/bg\ 7.png); background-repeat:repeat; background-size:  contain;">
+  <div class=" md:flex  max-md:justify-center flex max-md:flex-col max-md:space-y-8 max-md:items-center   justify-around space-x-[5%]  bg-no-repeat bg- contain h-[100%] ">
+      
+      <div class=" md:-ml-2 w-[45%] max-md:w-[80%]">
+        <p class="text-5xl mb-6 font-[syne] font-semibold text-black text-center max-[1200px]:text-4xl max-md:text-5xl">Partners</p>
+        <div class="grid grid-cols-3 gap-x-10 max-[1200px]:gap-x-5 max-[930px]:gap-x-2 gap-y-6 max-md:gap-x-10 ">
+          <a href="">
+            <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square">
+                <img src="img/tetroninfotech 1.png" alt="" class="w-full h-full object-contain rounded-xl">
+            </div>
+          </a>
+            <div class="p-1  rounded-xl aspect-square"></div>
+            <a href="">
+              <div class="row-span-2 ">
+                <div class="p-1   rounded-xl bg-contain bg-no-repeat bg-center aspect-square "
+                    style="background-image: url(./img/99af692f-a4ad-4562-bba1-9263e1dd0e9b\ 1.png);">
+                </div>
+              </div>
+            </a>
+            <a href="https://ijmm.chendurph.com/">
+              <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square">
+                  <img src="img/Website (2).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://jafonlinestore.github.io/">
+              <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square ">
+                  <img src="img/Website (3).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <div class="p-1  rounded-xl aspect-square"></div>
+            <a href="https://exceljournals.org.in/">
+              <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square">
+                  <img src="img/Website (6).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://eliita.com/">
+              <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square">
+                  <img src="img/Website (5).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="">
+              <div class="p-1 bg-white rounded-xl flex justify-center items-center aspect-square">
+                  <img src="img/Website (4).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+        </div>
+    </div>
+    <div class="h-[28rem] max-md:hidden p-[3px] mt-20 max-xl:h-[22rem] max-xl:p-[2px] max-[1150px]:h-[22rem]  max-[1070px]:h-[20rem] max-[1000px]:h-[18rem] max-[870px]:h-[16rem] bg-[#c08dff] max-[1350px]:h-[24rem]"></div>
+      
+      <div class=" md:-ml-2 w-[45%] max-md:w-[80%]">
+        <p class="text-5xl mb-6 font-[syne] font-semibold text-[#A155FF]  text-center max-[1200px]:text-4xl max-md:text-5xl">Customers</p>
+        <div class="grid grid-cols-3 gap-x-10 max-[1200px]:gap-x-5 max-[930px]:gap-x-2 gap-y-6 max-md:gap-x-10">
+          <div class="row-span-2  -ml-4 max-md:-ml-">
+            <div class="p-1 rounded-xl bg-contain bg-no-repeat bg-center    flex items-start justify-end">
+              <img src="img/c79541e5-535d-42d6-9a5c-06444d8f7e93 1.png" alt="" class="w-full h-full object-contain rounded-xl">
+          </div>
+          </div>            
+            <div class="p-1  rounded-xl aspect-square"></div>
+            <a href="https://ijmm.chendurph.com/">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Website (2).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://jafonlinestore.github.io/">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Website (3).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Logo-Blue-2024 1.svg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://eliita.com/">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Website (5).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://exceljournals.org.in/">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Website (6).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+            <a href="https://doi.uk.com/">
+              <div class="p-1 bg-white rounded-xl bg-contain bg-no-repeat bg-center aspect-square">
+                  <img src="img/Website (7).jpeg" alt="" class="w-full h-full object-contain rounded-xl">
+              </div>
+            </a>
+        </div>
+    </div>
+    
+    </div>
+  </div>
+  <!-- for small screen -->
+  <div class="praveen max-md:px-[8%] px-[9%] xl:px-[12%] block sm:hidden justify-around bg-no-repeat bg- contain pb-8" style="background-image: url(./img/bg\ 7.png);">
+      <div class="flex flex-col space-y-4 justify-center items-center overflow-hidden ">
+          <p class="text-4xl p-5 font-[syne] font-semibold text-black text-center">partners</p>
+          <div class="flex justify-center"><img src="img/99af692f-a4ad-4562-bba1-9263e1dd0e9b 1.png" alt="" class="max-h-36"></div>
+          <div class="flex flex-col space-y-4 max-[400px]:space-y-2 justify-center items-cente ">
+            <a href="https://eliita.com/">
+              <div class="w-96 h-32 max-[500px]:h-32 max-[400px]:h-28  max rounded-3xl max-[500px]:w-80 max-[400px]:w-72 max-[367px]:w-64 max-[325px]:w-60 max-[367px]:h-24  max-[305px]:w-56"><img src="img/Website (5).jpeg" alt="" class="h-full w-full rounded-3xl "></div>
+            </a>
+            <div class="flex justify-between">
+              <a href="https://ijmm.chendurph.com/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (2).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl "></div>
+              </a>
+              <a href="https://jafonlinestore.github.io/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (3).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl"></div>
+              </a>              
+            </div>
+            <div class="flex justify-between">
+              <a href="https://exceljournals.org.in/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24" ><img src="img/Website (6).jpeg" alt="" class="h-[98%] w-[98%] object-cover rounded-3xl"></div>
+              </a>
+              <a href="https://doi.uk.com/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (7).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl"></div>
+              </a>
+            </div>
+          </div>
+        </div> 
+        <div class="flex flex-col space-y-4 justify-center items-center overflow-hidden ">
+          <p class="text-4xl p-5 font-[syne] font-semibold text-purple-800 text-center">Customers</p>
+          <div class="flex justify-center"><img src="img/99af692f-a4ad-4562-bba1-9263e1dd0e9b 1.png" alt="" class="max-h-36"></div>
+          <div class="flex flex-col space-y-4 max-[400px]:space-y-2 justify-center items-cente ">
+            <a href="https://eliita.com/">
+              <div class="w-96 h-32 max-[500px]:h-32 max-[400px]:h-28  max rounded-3xl max-[500px]:w-80 max-[400px]:w-72 max-[367px]:w-64 max-[325px]:w-60 max-[367px]:h-24  max-[305px]:w-56"><img src="img/Website (5).jpeg" alt="" class="h-full w-full rounded-3xl "></div>
+            </a>
+            <div class="flex justify-between">
+              <a href="https://ijmm.chendurph.com/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (2).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl "></div>
+              </a>
+              <a href="https://jafonlinestore.github.io/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (3).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl"></div>                
+              </a>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://exceljournals.org.in/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24" ><img src="img/Website (6).jpeg" alt="" class="h-[98%] w-[98%] object-cover rounded-3xl"></div>
+              </a>
+              <a href="https://doi.uk.com/">
+                <div class="h-32 w-32 bg-white p-[2%] rounded-3xl max-[400px]:h-28 max-[400px]:w-28 max-[367px]:h-24 max-[367px]:w-24"><img src="img/Website (7).jpeg" alt="" class="h-full w-full object-cover  rounded-3xl"></div>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>  
+  </div>
+<!-- contact form -->
+<div class="my-16 max-md:my-8 max-sm:my-4 max-h-full ">
+  <div class="flex-wrap flex max-w-full  gap-10 justify-between max-md:px-[8%] px-[9%] xl:px-[12%] max-[950px]:flex-col ">
+      <div class="flex-1">
+          <p class="text-orange-500  font-[syne] font-bold">Have an idea?</p>
+          <p class="text-8xl max-md:text-7xl font-[syne] font-semibold leading-snug max-xl:text-7xl max-xl:leading-normal max-[950px]:text-8xl  max-[500px]:text-6xl max-[400px]:text-5xl">Drop us a <br> <span
+                  class="text-purple-500">line!</span>
+              </p>
+              <div class="flex items-center">
+                <p class="text-black text-lg font-[syne] mx-2 ">hello@zubyte.org</p> 
+                <svg width="16" height="16" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.00049 9.99055H3.60591C3.23128 9.99055 2.87199 9.84173 2.60708 9.57683C2.34218 9.31193 2.19336 8.95264 2.19336 8.57801V4.18342C2.19336 3.80879 2.34218 3.4495 2.60708 3.1846C2.87199 2.9197 3.23128 2.77087 3.60591 2.77087H8.00049C8.37512 2.77087 8.73441 2.9197 8.99931 3.1846C9.26422 3.4495 9.41304 3.80879 9.41304 4.18342V8.57801C9.41304 8.95264 9.26422 9.31193 8.99931 9.57683C8.73441 9.84173 8.37512 9.99055 8.00049 9.99055Z" fill="#767676"/>
+                  <path d="M3.13505 2.14299H7.76271C7.66505 1.86779 7.48463 1.62955 7.2462 1.46094C7.00777 1.29234 6.72301 1.20165 6.431 1.20129H2.03641C1.66178 1.20129 1.30249 1.35012 1.03759 1.61502C0.772683 1.87992 0.623861 2.23921 0.623861 2.61384V7.00843C0.624214 7.30045 0.714912 7.5852 0.883512 7.82363C1.05211 8.06206 1.29036 8.24248 1.56556 8.34015V3.71249C1.56556 3.29623 1.73092 2.89702 2.02525 2.60269C2.31959 2.30835 2.7188 2.14299 3.13505 2.14299Z" fill="#767676"/>
+                </svg>
+              </div>
+      </div>
+      <div class="max-h-full flex-1">
+
+          <form class="flex flex-col gap-y-6 " id="hii">
+              <div class="flex md:gap-6 gap-x-3 max-[460px]:flex-col">
+                  <div class="relative z-0 w-full mb-5 group">
+                      <input type="text" name="floating_first_name" id="floating_first_name"
+                          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-0 border-gray-400 appearance-none dark:text-white dark:border-black dark:focus:border-black focus:outline-none focus:ring-0 focus:border-black peer"
+                          placeholder=" " required />
+                      <label for="floating_first_name"
+                          class="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-black peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                          <p class="-mt-2 text-xl max-[400px]:text-lg font-semibold font-[syne]">Your name <span
+                                  class="text-[#F2751A]">*</span> </p>
+                      </label>
+                  </div>
+                  <div class="relative z-0 w-full  group">
+                      <input type="email" name="floating_email" id="floating_email"
+                          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-0 border-gray-400 appearance-none dark:text-white dark:border-black dark:focus:border-black focus:outline-none focus:ring-0 focus:border-black peer"
+                          placeholder=" " required />
+                      <label for="floating_first_name"
+                          class="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-black peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                          <p class="-mt-2 text-xl max-[400px]:text-lg font-semibold font-[syne]">Your Email <span
+                                  class="text-[#F2751A]">*</span> </p>
+                      </label>
+                  </div>
+              </div>
+              <div class="relative z-0 w-full  group">
+                <input type="text" name="floating_first_name" id="floating_first_name"
+                    class="block mt-3 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-0 border-gray-400 appearance-none    focus:outline-none focus:ring-0 focus:border-black peer"
+                    placeholder=" " maxlength="1000" oninput="updateCount(this)" required />
+                <label for="floating_first_name"
+                    class="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-black  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                    <p class="-mt-2 text-xl font-semibold max-[400px]:text-lg">Tell us about your project <span
+                            class="text-[#F2751A]">*</span></p>
+                </label>
+                <div class="flex justify-end mt-1">
+                    
+                    <p class="text-base text-black " id="char-count">0/1000</p>
+                </div>
+            </div>
+              <div class="flex items-center">
+                <label for="file-upload" class="flex items-center px-2 py-2 bg-[#F2751A] hover:bg-[#f2621a] text-white text-xs font-light rounded-3xl shadow-sm  focus:outline-none focus:ring-2 focus:ring-[#F2751A] focus:ring-offset-2 cursor-pointer">
+                    <i class="fa-solid fa-paperclip mr-2 fa-sm"></i> Attach File
+                </label>
+                <input id="file-upload" type="file" class="hidden" />
+              </div>
+              <h class="text-[#878787]">By clicking Submit, I consent to the <span class="text-[#F2751A]">cookies policy</span> governing my service usage and provided personal data, respectively.
+              </h>
+                  <div class="flex  ">
+                    <button type="submit" class="px-4 py-2 bg-black text-white font-semibold rounded-3xl hover:bg-[#A155FF] focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-400">
+                      <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg;"></i>
+                      Submit
+                    </button>
+                  </div>
+      </div>
+
+
+
+      </form>
+  </div>
+
+</div>
+
+<!-- footer page -->
+<footer class="">
+  <div class="main box bg-black  flex flex-col lg:flex-row justify-around max-md:px-[8%] px-[9%] xl:px-[12%] py-24 max-md:py-14 max-[400px]:py-8">
+    <div class="left mb-12 max-sm:mb-6 lg:mb-0 lg:mr-16 -mt-4 flex-col" >
+      <div class="h-14 lg:h-28 min-h-14 min-w-24 w-fit">
+        <img src="img/Logo.svg" alt="" class="h-[100%] w-[100%] max-sm:h-[100%] max-sm:w-[80%] max-[400px]:w-[60%]" />
+      </div>
+      <div class="text-white text-lg mt-8 max-[400px]:text-base">
+        Where Ideas
+        <span class="text-[#a155ff] font-[syne] font-medium">E</span>volve
+        into <br />Product.
+      </div>
+    </div>
+    <div class="right text-white text-lg flex max-[591px]:gap-y-3  w-full justify-start max-lg:gap-x-24 lg:justify-around mb-12 max-sm:mb-6 lg:mb-0  max-sm:gap-x-12 max-md:gap-x-12 max-[450px]:gap-x-6">
+      <div>
+        <h1 class="font-semibold xl:text-xl max-lg:text-xl mb-4 max-sm:text-lg max-[540px]:text-base max-[400px]:text-sm">Services</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs max-[400px]:mb-1 hover:underline underline-offset-2 ">Design</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs max-[400px]:mb-1 hover:underline underline-offset-2">Development</h1>
+      </div>
+      <div>
+        <h1 class="font-semibold xl:text-xl max-lg:text-xl mb-4 max-sm:text-lg max-[540px]:text-base max-[400px]:text-sm">Products</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs max-[400px]:mb-1 hover:underline underline-offset-2">Web</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs max-[400px]:mb-1 hover:underline underline-offset-2">App</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs max-[400px]:mb-1 hover:underline underline-offset-2">Software</h1>
+      </div>
+      <div>
+        <h1 class="font-semibold xl:text-xl max-lg:text-xl mb-4 max-sm:text-lg max-[540px]:text-base max-[400px]:text-sm">Company</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs hover:underline underline-offset-2">Terms & Condition</h1>
+        <h1 class="max-[540px]:text-base max-[400px]:text-xs hover:underline underline-offset-2">Privacy Policy</h1>
+      </div>
+    </div>
+    <div class="flex flex-col text-white space-y-7">
+      <h1 class="font-semibold text-xl max-[400px]:text-base">Get in Touch</h1>
+      <div class="flex gap-x-3 mb-4">
+        <div>
+          <img class="h-20 max-lg:h-16 max-md:h-12 max-[400px]:h-9" src="img/Instagram (1).svg" alt="" />
+        </div>
+        <div>
+          <img class="h-20 max-lg:h-16 max-md:h-12 max-[400px]:h-9" src="img/twiter.svg" alt="" />
+        </div>
+        <div>
+          <img class="h-20 max-lg:h-16 max-md:h-12 max-[400px]:h-9" src="img/Linked in.svg" alt="" />
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+ <!-- swiper script tag -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+<script src="script.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>
